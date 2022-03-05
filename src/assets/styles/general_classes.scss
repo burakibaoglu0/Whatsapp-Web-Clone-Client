@@ -1,0 +1,63 @@
+@mixin all {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@mixin d-flex {
+    display: flex;
+}
+
+@mixin d-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin d-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin d-flex-row-centered {
+    @include d-flex-row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin d-flex-row-item-centered {
+    @include d-flex-row;
+    align-items: center;
+}
+
+@mixin d-flex-row-content-centered {
+    @include d-flex-row;
+    justify-content: center;
+}
+
+@mixin d-flex-column-centered{
+    @include d-flex-column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin d-flex-column-item-centered {
+    @include d-flex-column;
+    align-items: center;
+}
+
+@mixin d-flex-column-content-centered {
+    @include d-flex-column;
+    justify-content: center;
+}
+
+@mixin border($px: 1px, $color: black) {
+    border: $px solid $color;
+}
+
+@mixin box-shadow($px: 0px, $px2:0px, $px3:0px, $px4:0px, $color: rgba(102, 102, 102, 1)){
+    -webkit-box-shadow: $px $px2 $px3 $px4 $color;
+    -moz-box-shadow: $px $px2 $px3 $px4 $color;
+    box-shadow: $px $px2 $px3 $px4 $color;
+}
